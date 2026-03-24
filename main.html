@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   		 <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+		<title>Gestion d’une bibliothèque</title>
+		<style type="text/css"></style>
+	</head >
+	
+	<body>
+	<!--header-->
+		<header>
+			<a href="" class="header_logo">Maktebti</a>
+			<ul class="header_menu">
+				<li><a href='main.html'>home</a></li>
+				
+				<li><a href='#my-account-modal'>My Account</a></li>
+				
+        	</ul>
+        	<div class="header_buttons">
+        		<a href="#sign-in-modal">sign in </a>
+        		<a href="#sign-up-modal">sign up </a>
+        	</div>
+    	</header>
+    <!--header-->
+ 	<!-- Sign In Modal -->
+	<div id="sign-in-modal" class="modal">
+		<div class="modal-content">
+			<a href="#" class="close">&times;</a>
+			<h2>Sign In</h2>
+			<form>
+				<label for="sign-in-username">Username:</label>
+				<input type="text" id="sign-in-username" placeholder="Enter your username" required>
+				
+				<label for="sign-in-password">Password:</label>
+				<input type="password" id="sign-in-password" placeholder="Enter your password" required>
+				
+				<button type="submit">Sign In</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Sign Up Modal -->
+	<div id="sign-up-modal" class="modal">
+		<div class="modal-content">
+			<a href="#" class="close">&times;</a>
+			<h2>Sign Up</h2>
+			<form>
+				<label for="sign-up-username">Username:</label>
+				<input type="text" id="sign-up-username" placeholder="Choose a username" required>
+			
+				<label for="sign-up-password">Password:</label>
+				<input type="password" id="sign-up-password" placeholder="Choose a password" required>
+			
+				<label for="sign-up-email">Email:</label>
+				<input type="email" id="sign-up-email" placeholder="Enter your email" required>
+			
+				<button type="submit">Sign Up</button>
+			</form>
+		</div>
+	</div>
+	<!-- My Account Modal -->
+	<div id="my-account-modal" class="modal">
+		<div class="modal-content">
+			<a href="#" class="close">&times;</a>
+			<h2>My Account</h2>
+
+			<!-- Account Information -->
+			<div class="account-info">
+				<label for="account-username">Username:</label>
+				<input type="text" id="account-username" placeholder="Your username" value="JohnDoe" disabled>
+
+				<label for="account-email">Email:</label>
+				<input type="email" id="account-email" placeholder="Your email" value="john.doe@example.com" required>
+
+				<label for="account-password">Password:</label>
+				<input type="password" id="account-password" placeholder="Your password" required>
+			</div>
+
+			<!-- Account Statistics -->
+			<div class="account-stats">
+				<h3>Account Statistics</h3>
+				<div class="stat">
+					<label>Books Read:</label>
+					<span>15</span>
+				</div>
+				<div class="stat">
+					<label>Saved Books:</label>
+					<span>8</span>
+				</div>
+				<div class="stat">
+					<label>Last Search:</label>
+				</div>
+			</div>
+
+			<!-- Save Changes Button -->
+			<button type="submit">Save Changes</button>
+		</div>
+	</div>
+
+	<!--home-->
+    <section class="home">
+        <div class="left_right">
+            <div class="left">
+                <h1>What is maktebti?</h1>
+                <p>Welcome to Maktebti, your ultimate online library management platform. The name "Maktebti"
+					 (which means "My Library" in Arabic) symbolizes personalization and accessibility, bringing 
+					 the library closer to its users.</p>
+                
+            </div>
+            <div class="right">
+                <img src="photo/img1.jpg">
+            </div>
+        </div>
+    </section>
+
+	<!-- Services Section -->
+	<article class="services">
+		<h1 class="title">Our Services</h1>
+		<p class="small_title">Maktebti offers a seamless library experience with a vast collection of books, e-resources, and personalized features to inspire your love for knowledge.</p>
+		<div class="list_services">
+			<!-- Borrow Book -->
+			<div class="serv">
+				<img src="photo/borrow-icon.png" alt="Borrow">
+				<h4>Borrow Books</h4>
+				<p>Quickly borrow books with a simple click.</p>
+				<button class="modal-btn borrow-btn">Click here</button>
+				<div class="modal borrow-modal">
+					<div class="modal-content">
+						<label for="borrow-modal" class="close-btn">&times;</label>
+						<h2>Borrow a Book</h2>
+						<form action="#">
+							<label for="borrow-book-name">Book Name:</label>
+							<input type="text" id="borrow-book-name" placeholder="Enter book name" required>
+							<label for="borrow-author-name">Author Name:</label>
+							<input type="text" id="borrow-author-name" placeholder="Enter author name" required>
+							<button type="submit" class="action-btn">Borrow</button>
+						</form>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Search Library -->
+			<div class="serv">
+				<img src="photo/Search-Library.png" alt="Search">
+				<h4>Search Library</h4>
+				<p>Find books by title, author, or genre instantly.</p>
+				<button class="modal-btn search-btn">Click here</button>
+				<div class="modal search-modal">
+					<div class="modal-content">
+						<label for="search-modal" class="close-btn">&times;</label>
+						<h2>Search Books</h2>
+						<form action="#">
+							<label for="search-book">Book Name:</label>
+							<input type="text" id="search-book" placeholder="Enter book name" required>
+							<button type="submit" class="action-btn">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Reserve Book -->
+			<div class="serv">
+				<img src="photo/reserve-book.png" alt="Reserve">
+				<h4>Reserve Books</h4>
+				<p>Reserve books for later.</p>
+				<button class="modal-btn reserve-btn">Click here</button>
+				<div class="modal reserve-modal">
+					<div class="modal-content">
+						<label for="reserve-modal" class="close-btn">&times;</label>
+						<h2>Reserve a Book</h2>
+						<form action="#">
+							<label for="reserve-book-name">Book Name:</label>
+							<input type="text" id="reserve-book-name" placeholder="Enter book name" required>
+							<label for="reserve-author-name">Author Name:</label>
+							<input type="text" id="reserve-author-name" placeholder="Enter author name" required>
+							<button type="submit" class="action-btn">Reserve</button>
+						</form>
+					</div>
+				</div>
+			</div>
+	
+			<!-- E-Reading -->
+			<div class="serv">
+				<img src="photo/ebook.png" alt="E-Reading">
+				<h4>E-Reading</h4>
+				<p>Start reading e-books instantly.</p>
+				<button class="modal-btn ebook-btn">Click here</button>
+				<div class="modal ebook-modal">
+					<div class="modal-content">
+						<label for="ebook-modal" class="close-btn">&times;</label>
+						<h2>Start Reading</h2>
+						<form action="#">
+							<label for="ebook-name">Book Name:</label>
+							<input type="text" id="ebook-name" placeholder="Enter book name" required>
+							<label for="ebook-author">Author Name:</label>
+							<input type="text" id="ebook-author" placeholder="Enter author name" required>
+							<button type="submit" class="action-btn">Start Reading</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	
+	<!--contact-->
+	<section class="contact">
+		<h1 class="title">Contact us</h1>
+		<div class="form-image">
+			<form>
+				<input type="text" placeholder="Nom">
+				<input type="text" placeholder="Adesse Mail">
+				<input type="text" placeholder="Object of the Message">
+				<textarea id="" cols="30" rows="10" placeholder="your Message"></textarea>
+				<button class="button_link">
+					<a href="#">send your message</a>
+				</button>
+			</form>
+			<div class="image">
+				<img src="photo/contact-us.jpg" alt="contact">
+			</div>
+		</div>
+	</section>
+	<div style="margin-top:500px"></div>
+	</body>
+</html>
